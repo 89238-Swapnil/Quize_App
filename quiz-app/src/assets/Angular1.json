@@ -1,0 +1,20 @@
+[
+  {
+    "question": "What is Angular primarily used for?",
+    "options": ["Frontend development", "Backend development", "Database management", "Mobile OS"],
+    "answer": "Frontend development",
+    "category": "Angular"
+  },
+  {
+    "question": "Which decorator is used to define a component in Angular?",
+    "options": ["@NgModule", "@Component", "@Injectable", "@Directive"],
+    "answer": "@Component",
+    "category": "Angular"
+  },
+  {
+    "question": "What is the default file extension for Angular component files?",
+    "options": [".js", ".ts", ".jsx", ".java"],
+    "answer": ".ts",
+    "category": "Angular"
+  }
+]

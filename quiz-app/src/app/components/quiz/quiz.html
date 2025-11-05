@@ -1,0 +1,24 @@
+<div *ngIf="!loading(); else loadingTpl" class="quiz-container">
+    <button class="logout-btn" (click)="logout()">Logout</button>
+
+    <div *ngIf="currentQuestion() as q">
+        <h3 class="question">{{ q.id }}. {{ q.question }}</h3>
+
+        <div class="options">
+            <button *ngFor="let opt of q.options" (click)="selectOption(opt)"
+                [class.selected]="opt === selectedOption()" class="option-btn">
+                {{ opt }}
+            </button>
+        </div>
+
+        <div class="nav-btns mt-3">
+            <button (click)="previousQuestion()" [disabled]="currentQuestionIndex() === 0">Previous</button>
+            <button (click)="nextQuestion()" [disabled]="currentQuestionIndex() === questions.length - 1">Next</button>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #loadingTpl>
+    <p>Loading questions...</p>
+</ng-template>
