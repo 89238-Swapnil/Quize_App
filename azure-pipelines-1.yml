@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  name: Default
+  name: 'Azure Pipelines'
+  vmImage: 'ubuntu-latest'
+
 
 
 steps:
